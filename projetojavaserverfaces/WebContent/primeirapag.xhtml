@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>Projeto Java Server Faces JSF</title>
+</h:head>
+
+<h:body>
+
+	<h1>Acesso</h1>
+
+	<h:form>
+
+		<h:outputLabel>Nome: </h:outputLabel>
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}" />
+		<br />
+		<br />
+		<h:commandButton  id="addnome" value="Adiconar nome" action="#{pessoaBean.addNome}" />
+
+		<h:dataTable value="#{pessoaBean.nomes}" var="nome">
+		<h:column>
+		<h:outputText value="#{nome}"/>
+		</h:column>
+
+		</h:dataTable>
+		
+		<br />
+		<br />
+		<h:commandButton value="ir para o Index" action="index"/>
+
+	</h:form>
+
+</h:body>
+
+</html>
